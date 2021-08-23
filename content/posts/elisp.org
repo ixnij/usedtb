@@ -1,8 +1,13 @@
-#+TITLE: Elisp
+#+TITLE: Emacs Lisp 学习笔记
 #+DATE: 2021-08-23T12:59:00+08:00
 #+DRAFT: false
 #+TAGS[]:
 #+CATEGORIES[]:
 
 * Intro
+  我已经断断续续地使用 Emacs Lisp 来写一些配置，或者是工具一段时间了。然而，我出来没有系统、完整地去学习和了解 Emacs Lisp ，只是凭着自己使用 Common Lisp 的习惯
+  和记忆来 “想当然” 式地编写 Emacs Lisp 程序。随着使用 Emacs 的时间越来越长，我越发地发觉 Emacs Lisp 在 Emacs 使用中扮演着多么重要的角色，便有了本文。
+  我也希望能用 Lisp 写一些插件。至于学习这门古老的语言的有没有用，我想自然不用多说了。就算是单纯在使用 Emacs 的角度讲，我同样认为不用担心它会被替代，毕竟它发展这么多年了，
+  而且现在 “Native-comp” 的分支被合并到主线了，不是吗？这样 Elisp 的性能也提高了。不用担心自己的配置，或者是插件在 Emacs 的某一次更新之后过时。
+  
   
