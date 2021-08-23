@@ -1,8 +1,8 @@
-baseURL = "https://ixnij.github.io/blog"
-DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
+baseURL = "https://ixnik.tk/"
+DefaultContentLanguage = "zh-hant" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "我应该没有扯淡"
-copyright = "Thomas Wu 200x ~ forever"
+title = "我应该没在扯淡"
+copyright = "GNU GPL v3"
 theme = "diary"
 # googleAnalytics = "UA-123-45"
 
@@ -19,7 +19,7 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "我说的应该都是真的"
+subtitle = "我说的都是真的"
 enableGitalk = true
 
 # Twitter Card and Open Graph settings
@@ -31,12 +31,12 @@ description = "My HomePage Description"  # will set 'og:description'
 [params.gitalk]
   owner = "ixnij"
   repo = "blog"
-  client_id = "103b5aa7edf03e900457"
-  client_secret = "1926a27c504832c6614eb45a43b7160b16d81f6c"
+  client_id = "103b5aa7edf03e90045"
+  client_secret = "1926a27c504832c6614eb45a43b7160b16d81f6"
 [taxonomies]
    tag = "tags"
    category = "categories"
-ppppp
+
 [[menu.main]]
 url = "/categories"
 name = "Categories"
