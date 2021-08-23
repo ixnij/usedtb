@@ -1,7 +1,32 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没有扯淡</title><link>https://ixnij.github.io/blog/</link><description>Recent content on 我应该没有扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Thomas Wu 200x ~ forever</copyright><lastBuildDate>Mon, 23 Aug 2021 12:59:00 +0800</lastBuildDate><atom:link href="https://ixnij.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Elisp</title><link>https://ixnij.github.io/blog/posts/elisp/</link><pubDate>Mon, 23 Aug 2021 12:59:00 +0800</pubDate><guid>https://ixnij.github.io/blog/posts/elisp/</guid><description>我应该没有扯淡 https://ixnij.github.io/blog/posts/elisp/ -
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没在扯淡</title><link>https://ixnik.tk/</link><description>Recent content on 我应该没在扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>GNU GPL v3</copyright><lastBuildDate>Mon, 23 Aug 2021 12:59:00 +0800</lastBuildDate><atom:link href="https://ixnik.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>Emacs Lisp 学习笔记</title><link>https://ixnik.tk/posts/elisp/</link><pubDate>Mon, 23 Aug 2021 12:59:00 +0800</pubDate><guid>https://ixnik.tk/posts/elisp/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/elisp/ -
 &lt;div id="outline-container-headline-1" class="outline-2">
 &lt;h2 id="headline-1">
 Intro
 &lt;/h2>
+&lt;div id="outline-text-headline-1" class="outline-text-2">
+&lt;p>我已经断断续续地使用 Emacs Lisp 来写一些配置，或者是工具一段时间了。&lt;/p>
+&lt;p>
+然而，我出来没有系统、完整地去学习和了解 Emacs Lisp ，只是凭着自己使用 Common Lisp 的习惯
+和记忆来 “想当然” 式地编写 Emacs Lisp 程序。&lt;/p>
+&lt;p>
+随着使用 Emacs 的时间越来越长，我越发地发觉 Emacs Lisp 在 Emacs 使用中扮演着多么重要的角色，
+下定决心去学习它，便有了本文。&lt;/p>
+&lt;p>
+我也希望能用 Lisp 写一些插件。至于学习这门古老的语言的有没有用，我想自然不用多说了。就算是单纯在使用 Emacs 的角度讲，我同样认为不用担心它会被替代，毕竟它发展这么多年了，
+而且现在 “Native-comp”&lt;sup class="footnote-reference">&lt;a id="footnote-reference-1" href="#footnote-1">1&lt;/a>&lt;/sup> 的分支被合并到主线了，不是吗&lt;/p>
+&lt;p>
+这样 Elisp 的性能也提高了。不用担心自己的配置，或者是插件在 Emacs 的某一次更新之后过时。&lt;/p>
 &lt;/div>
-- https://ixnij.github.io/blog/posts/elisp/ - Thomas Wu 200x ~ forever</description></item></channel></rss>
+&lt;/div>
+&lt;div class="footnotes">
+&lt;hr class="footnotes-separatator">
+&lt;div class="footnote-definitions">
+&lt;div class="footnote-definition">
+&lt;sup id="footnote-1">&lt;a href="#footnote-reference-1">1&lt;/a>&lt;/sup>
+&lt;div class="footnote-body">
+&lt;p>See Emacs China blog.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+- https://ixnik.tk/posts/elisp/ - GNU GPL v3</description></item></channel></rss>
