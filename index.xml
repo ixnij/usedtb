@@ -13,9 +13,16 @@ Intro
 下定决心去学习它，便有了本文。&lt;/p>
 &lt;p>
 我也希望能用 Lisp 写一些插件。至于学习这门古老的语言的有没有用，我想自然不用多说了。就算是单纯在使用 Emacs 的角度讲，我同样认为不用担心它会被替代，毕竟它发展这么多年了，
-而且现在 “Native-comp”&lt;sup class="footnote-reference">&lt;a id="footnote-reference-1" href="#footnote-1">1&lt;/a>&lt;/sup> 的分支被合并到主线了，不是吗&lt;/p>
+而且现在 “Native-comp”&lt;sup class="footnote-reference">&lt;a id="footnote-reference-1" href="#footnote-1">1&lt;/a>&lt;/sup> 的分支被合并到主线了，Emacs Lisp 的性能又一次加强了。&lt;/p>
 &lt;p>
 这样 Elisp 的性能也提高了。不用担心自己的配置，或者是插件在 Emacs 的某一次更新之后过时。&lt;/p>
+&lt;p>
+Emacs 自己就带有 Elisp 文档， &lt;code class="verbatim">C-h i&lt;/code> 就有非常详细的介绍和文档。&lt;/p>
+&lt;div class="src src-emacs-lisp">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">(&lt;span style="color:#00688b">info&lt;/span> &lt;span style="color:#cd5555">&amp;#34;elisp&amp;#34;&lt;/span>) &lt;span style="color:#228b22">;; You can also do it by this.&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;p>
+你也可以 &lt;code class="verbatim">C-x C-b&lt;/code> 找到 &lt;code class="verbatim">*scratch*&lt;/code> 然后输入以上的 lisp 代码，找到官方的简短教程以及说明书 （reference）。&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;div class="footnotes">
@@ -24,7 +31,7 @@ Intro
 &lt;div class="footnote-definition">
 &lt;sup id="footnote-1">&lt;a href="#footnote-reference-1">1&lt;/a>&lt;/sup>
 &lt;div class="footnote-body">
-&lt;p>See Emacs China blog.&lt;/p>
+&lt;p>See &lt;a href="https://emacs-china.org">Emacs China&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
