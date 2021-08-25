@@ -32,7 +32,7 @@ description = "My HomePage Description"  # will set 'og:description'
   owner = "ixnij"
   repo = "blog"
   client_id = "103b5aa7edf03e90045"
-  client_secret = "1926a27c504832c6614eb45a43b7160b16d81f6"
+  client_secret = "eee0cfd03c9d7c3898907689fe8cba756a748388"
 [taxonomies]
    tag = "tags"
    category = "categories"

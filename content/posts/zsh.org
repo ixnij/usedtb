@@ -1,0 +1,8 @@
+#+TITLE: Zsh
+#+DATE: 2021-08-24T18:44:41+08:00
+#+DRAFT: false
+#+TAGS[]:
+#+CATEGORIES[]:
+
+* Intro
+ 
