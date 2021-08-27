@@ -10,7 +10,7 @@
   然而，我出来没有系统、完整地去学习和了解 Emacs Lisp ，只是凭着自己使用 Common Lisp 的习惯
   和记忆来 “想当然” 式地编写 Emacs Lisp 程序。
   
-  随着使用 Emacs 的时间越来越长，我越发地发觉 Emacs Lisp 在 Emacs 使用中扮演着多么重要的角色，
+  随着使用 Emacs 的时间越来越长，我越发地觉得 Emacs Lisp 在 Emacs 使用中扮演着多么重要的角色，
   下定决心去学习它，便有了本文。
   
   我也希望能用 Lisp 写一些插件。至于学习这门古老的语言的有没有用，我想自然不用多说了。就算是单纯在使用 Emacs 的角度讲，我同样认为不用担心它会被替代，毕竟它发展这么多年了，
@@ -25,5 +25,7 @@
   #+end_src
 
   你也可以 =C-x C-b= 找到 =*scratch*= 然后输入以上的 lisp 代码，找到官方的简短教程以及说明书 （reference）。
+
+  这篇文档是根据李杀的 Emacs Lisp 教程来的。
   
 [fn:1] See [[https://emacs-china.org][Emacs China]].
