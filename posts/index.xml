@@ -4,4 +4,4 @@
 我也希望能用 Lisp 写一些插件。至于学习这门古老的语言的有没有用，我想自然不用多说了。就算是单纯在使用 Emacs 的角度讲，我同样认为不用担心它会被替代，毕竟它发展这么多年了， 而且现在 “Native-comp”1 的分支被合并到主线了，Emacs Lisp 的性能又一次加强了。
 这样 Elisp 的性能也提高了。不用担心自己的配置，或者是插件在 Emacs 的某一次更新之后过时。
 Emacs 自己就带有 Elisp 文档， C-h i 就有非常详细的介绍和文档。
-(info &amp;#34;elisp&amp;#34;) ;; You can also do it by this. 你也可以 C-x C-b 找到 *scratch* 然后输入以上的 lisp 代码，找到官方的简短教程以及说明书 （reference）。</description></item></channel></rss>
+(info &amp;#34;elisp&amp;#34;) ;; You can also do it by this. 以上的代码片段在 Emacs 下可以通过 C-c C-c 直接运行。</description></item></channel></rss>

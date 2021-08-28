@@ -28,6 +28,8 @@ Emacs 自己就带有 Elisp 文档， &lt;code class="verbatim">C-h i&lt;/code> 
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-emacs-lisp" data-lang="emacs-lisp">(&lt;span style="color:#00688b">info&lt;/span> &lt;span style="color:#cd5555">&amp;#34;elisp&amp;#34;&lt;/span>) &lt;span style="color:#228b22">;; You can also do it by this.&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;p>
+以上的代码片段在 Emacs 下可以通过 &lt;code class="verbatim">C-c C-c&lt;/code> 直接运行。&lt;/p>
+&lt;p>
 你也可以 &lt;code class="verbatim">C-x C-b&lt;/code> 找到 &lt;code class="verbatim">*scratch*&lt;/code> 然后输入以上的 lisp 代码，找到官方的简短教程以及说明书 （reference）。&lt;/p>
 &lt;p>
 这篇文档是根据李杀的 Emacs Lisp 教程来的。&lt;/p>
