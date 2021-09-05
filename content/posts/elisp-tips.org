@@ -1,0 +1,18 @@
+#+TITLE: Elisp Tips
+#+DATE: 2021-09-05T18:34:30+08:00
+#+DRAFT: false
+#+TAGS[]:
+#+CATEGORIES[]:
+
+=ns-appearance= 这个变量可以用来判断系统的主题 (light/dark) 。
+
+用法例子：
+
+#+begin_src elisp
+(if (string= ns-system-appearance "dark")
+    (load-theme 'misterioso)
+  (load-theme 'leuven))
+#+end_src
+
+#+RESULTS:
+: t
