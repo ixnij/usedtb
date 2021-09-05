@@ -1,18 +1,26 @@
-#+TITLE: Elisp Tips
+#+TITLE: Emacs/Elisp Tips
 #+DATE: 2021-09-05T18:34:30+08:00
 #+DRAFT: false
 #+TAGS[]:
 #+CATEGORIES[]:
 
-=ns-appearance= 这个变量可以用来判断系统的主题 (light/dark) 。
+=ns-system-appearance= 这个变量可以用来判断 macOS 系统的主题 (light/dark) 。
+
+当然，这个变量的前提是 macOS 系统的版本 >= 10.14，也就是 Mojave 后面的 macOS 系统都可以使用。
+
+这里翻译一下 Emacs 的文档：这个变量在 macOS < 10.14 和 GNUstep 上会被忽略掉，它的缺省（即默认值）是 =nil= 。
 
 用法例子：
 
-#+begin_src elisp
+#+BEGIN_SRC elisp
 (if (string= ns-system-appearance "dark")
     (load-theme 'misterioso)
   (load-theme 'leuven))
-#+end_src
+#+END_SRC
 
 #+RESULTS:
 : t
+
+在写 elisp 的时候， =mini-buffer= 出现的提示性文档叫做 "el-doc"，可以通过 =M-x el-doc-mode= 来开启。
+
+=M-x whi-c= （即 white-space-cleanup）可以处理掉文档的空白部分。
