@@ -1,4 +1,24 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没在扯淡</title><link>https://ixnik.tk/</link><description>Recent content on 我应该没在扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Thomas Wu 2020 ~ 2021</copyright><lastBuildDate>Tue, 24 Aug 2021 18:44:41 +0800</lastBuildDate><atom:link href="https://ixnik.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>Zsh</title><link>https://ixnik.tk/posts/zsh/</link><pubDate>Tue, 24 Aug 2021 18:44:41 +0800</pubDate><guid>https://ixnik.tk/posts/zsh/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/zsh/ -
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没在扯淡</title><link>https://ixnik.tk/</link><description>Recent content on 我应该没在扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Thomas Wu 2020 ~ 2021</copyright><lastBuildDate>Sun, 05 Sep 2021 18:34:30 +0800</lastBuildDate><atom:link href="https://ixnik.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>Emacs/Elisp Tips</title><link>https://ixnik.tk/posts/elisp-tips/</link><pubDate>Sun, 05 Sep 2021 18:34:30 +0800</pubDate><guid>https://ixnik.tk/posts/elisp-tips/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/elisp-tips/ -&lt;p>
+&lt;code class="verbatim">ns-system-appearance&lt;/code> 这个变量可以用来判断 macOS 系统的主题 (light/dark) 。&lt;/p>
+&lt;p>
+当然，这个变量的前提是 macOS 系统的版本 &amp;gt;= 10.14，也就是 Mojave 后面的 macOS 系统都可以使用。&lt;/p>
+&lt;p>
+这里翻译一下 Emacs 的文档：这个变量在 macOS &amp;lt; 10.14 和 GNUstep 上会被忽略掉，它的缺省（即默认值）是 &lt;code class="verbatim">nil&lt;/code> 。&lt;/p>
+&lt;p>
+用法例子：&lt;/p>
+&lt;div class="src src-elisp">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-elisp" data-lang="elisp">(&lt;span style="color:#658b00">if&lt;/span> (&lt;span style="color:#00688b">string=&lt;/span> &lt;span style="color:#00688b">ns-system-appearance&lt;/span> &lt;span style="color:#cd5555">&amp;#34;dark&amp;#34;&lt;/span>)
+(&lt;span style="color:#00688b">load-theme&lt;/span> &lt;span style="color:#cd5555">&amp;#39;misterioso&lt;/span>)
+(&lt;span style="color:#00688b">load-theme&lt;/span> &lt;span style="color:#cd5555">&amp;#39;leuven&lt;/span>))&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;pre class="example">
+t
+&lt;/pre>
+&lt;p>
+在写 elisp 的时候， &lt;code class="verbatim">mini-buffer&lt;/code> 出现的提示性文档叫做 &amp;#34;el-doc&amp;#34;，可以通过 &lt;code class="verbatim">M-x el-doc-mode&lt;/code> 来开启。&lt;/p>
+&lt;p>
+&lt;code class="verbatim">M-x whi-c&lt;/code> （即 white-space-cleanup）可以处理掉文档的空白部分。&lt;/p>
+- https://ixnik.tk/posts/elisp-tips/ - Thomas Wu 2020 ~ 2021</description></item><item><title>Zsh</title><link>https://ixnik.tk/posts/zsh/</link><pubDate>Tue, 24 Aug 2021 18:44:41 +0800</pubDate><guid>https://ixnik.tk/posts/zsh/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/zsh/ -
 &lt;div id="outline-container-headline-1" class="outline-2">
 &lt;h2 id="headline-1">
 Intro
