@@ -13,12 +13,12 @@ NS-system-appearance
 &lt;p>
 用法例子：&lt;/p>
 &lt;div class="src src-elisp">
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-elisp" data-lang="elisp">(&lt;span style="color:#658b00">if&lt;/span> (&lt;span style="color:#00688b">string=&lt;/span> &lt;span style="color:#00688b">ns-system-appearance&lt;/span> &lt;span style="color:#cd5555">&amp;#34;dark&amp;#34;&lt;/span>)
-(&lt;span style="color:#00688b">load-theme&lt;/span> &lt;span style="color:#cd5555">&amp;#39;misterioso&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-elisp" data-lang="elisp">(&lt;span style="color:#658b00">if&lt;/span> (&lt;span style="color:#658b00">or&lt;/span> (&lt;span style="color:#00688b">string=&lt;/span> &lt;span style="color:#00688b">ns-system-appearance&lt;/span> &lt;span style="color:#cd5555">&amp;#34;dark&amp;#34;&lt;/span>) (&lt;span style="color:#00688b">not&lt;/span> (&lt;span style="color:#00688b">display-graphic-p&lt;/span>)))
+(&lt;span style="color:#00688b">load-theme&lt;/span> &lt;span style="color:#cd5555">&amp;#39;doom-material&lt;/span>)
 (&lt;span style="color:#00688b">load-theme&lt;/span> &lt;span style="color:#cd5555">&amp;#39;leuven&lt;/span>))&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>
 &lt;pre class="example">
-tp
+t
 &lt;/pre>
 &lt;/div>
 &lt;/div>
