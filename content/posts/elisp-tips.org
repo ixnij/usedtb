@@ -15,13 +15,13 @@
   用法例子：
 
   #+BEGIN_SRC elisp
-  (if (string= ns-system-appearance "dark")
-      (load-theme 'misterioso)
+  (if (or (string= ns-system-appearance "dark") (not (display-graphic-p)))
+      (load-theme 'doom-material)
     (load-theme 'leuven))
   #+END_SRC
 
   #+RESULTS:
-  : tp
+  : t
 
 * El-doc
 
