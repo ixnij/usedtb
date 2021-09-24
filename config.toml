@@ -31,8 +31,8 @@ description = "My HomePage Description"  # will set 'og:description'
 [params.gitalk]
   owner = "ixnij"
   repo = "blog"
-  client_id = "103b5aa7edf03e90045"
-  client_secret = "eee0cfd03c9d7c3898907689fe8cba756a748388"
+  client_id = "103b5aa7edf03e900457"
+  client_secret = "706b0329c964350be2589e4cb6f2da28fb0875df"
 [taxonomies]
    tag = "tags"
    category = "categories"
