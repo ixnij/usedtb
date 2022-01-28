@@ -22,8 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify && echo "ixnik.tk" > ./public/CNAME
-
+        run: hugo --minify
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'

@@ -23,6 +23,12 @@
   #+RESULTS:
   : t
 
+  但是，这个东西是 =emacs-plus= 通过一个 patch 引入的，所以。
+
+  #+begin_src haskell
+  where emacs-plus = search "https://github.com/"
+  #+end_src
+
 * El-doc
 
   在写 elisp 的时候， =mini-buffer= 出现的提示性文档叫做 "el-doc"，可以通过 =M-x el-doc-mode= 来开启。

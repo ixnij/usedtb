@@ -1,0 +1,59 @@
+#+TITLE: Haskell
+#+DATE: 2022-01-21T18:14:31+08:00
+#+DRAFT: false
+#+TAGS[]:
+#+CATEGORIES[]:
+
+* =<$=
+
+第一次看到这个函数，是在 Emacs 的 Haskell-Mode 里面带的 repl 里。
+看看他的签名:
+
+#+begin_src haskell
+λ> :info <$
+type Functor :: (* -> *) -> Constraint
+class Functor f where
+  ...
+  (<$) :: a -> f b -> f a
+  	-- Defined in ‘GHC.Base’
+infixl 4 <$
+#+end_src
+
+看到这个中缀函数，想到 =<$>= 。记得这是 Applicative 里实现的，看看。
+
+#+begin_src haskell
+λ> :info <$>
+(<$>) :: Functor f => (a -> b) -> f a -> f b
+  	-- Defined in ‘Data.Functor’
+infixl 4 <$>
+#+end_src
+
+嗯，发现了一点，其实 =<$= 的签名也可以写成这样的形式：
+
+#+begin_src haskell
+(<$) :: Functor f => a -> f b -> f a
+#+end_src
+
+Wow，这下大家都知道了。
+
+* Monad
+
+#+BEGIN_SRC haskell
+type Monad :: (* -> *) -> Constraint
+class Applicative m => Monad m where
+  (>>=) :: m a -> (a -> m b) -> m b
+  (>>) :: m a -> m b -> m b
+  return :: a -> m a
+  {-# MINIMAL (>>=) #-}
+  	-- Defined in ‘GHC.Base’
+instance Monad (Either e) -- Defined in ‘Data.Either’
+instance Monad [] -- Defined in ‘GHC.Base’
+instance Monad Maybe -- Defined in ‘GHC.Base’
+instance Monad IO -- Defined in ‘GHC.Base’
+instance Monad ((->) r) -- Defined in ‘GHC.Base’
+instance (Monoid a, Monoid b, Monoid c) => Monad ((,,,) a b c)
+  -- Defined in ‘GHC.Base’
+instance (Monoid a, Monoid b) => Monad ((,,) a b)
+  -- Defined in ‘GHC.Base’
+instance Monoid a => Monad ((,) a) -- Defined in ‘GHC.Base’
+#+END_SRC
