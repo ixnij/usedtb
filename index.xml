@@ -1,4 +1,65 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没在扯淡</title><link>https://ixnik.tk/</link><description>Recent content on 我应该没在扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Thomas Wu 2020 ~ 2021</copyright><lastBuildDate>Sun, 05 Sep 2021 18:34:30 +0800</lastBuildDate><atom:link href="https://ixnik.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>Emacs/Elisp Tips</title><link>https://ixnik.tk/posts/elisp-tips/</link><pubDate>Sun, 05 Sep 2021 18:34:30 +0800</pubDate><guid>https://ixnik.tk/posts/elisp-tips/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/elisp-tips/ -
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我应该没在扯淡</title><link>https://ixnik.github.io/blog/</link><description>Recent content on 我应该没在扯淡</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Thomas Wu 2020 ~ 2021</copyright><lastBuildDate>Fri, 21 Jan 2022 18:14:31 +0800</lastBuildDate><atom:link href="https://ixnik.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Haskell</title><link>https://ixnik.github.io/blog/posts/haskell/</link><pubDate>Fri, 21 Jan 2022 18:14:31 +0800</pubDate><guid>https://ixnik.github.io/blog/posts/haskell/</guid><description>我应该没在扯淡 https://ixnik.github.io/blog/posts/haskell/ -
+&lt;div id="outline-container-headline-1" class="outline-2">
+&lt;h2 id="headline-1">
+&lt;code class="verbatim">&amp;lt;$&lt;/code>
+&lt;/h2>
+&lt;div id="outline-text-headline-1" class="outline-text-2">
+&lt;p>
+第一次看到这个函数，是在 Emacs 的 Haskell-Mode 里面带的 repl 里。
+看看他的签名:&lt;/p>
+&lt;div class="src src-haskell">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-haskell" data-lang="haskell">&lt;span style="color:#008b45">λ&lt;/span>&amp;gt; &lt;span style="color:#00688b;font-weight:bold">:&lt;/span>info &amp;lt;$
+&lt;span style="color:#8b008b;font-weight:bold">type&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Functor&lt;/span> &lt;span style="color:#8b008b">::&lt;/span> (* &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> *) &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Constraint&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Functor&lt;/span> f &lt;span style="color:#8b008b;font-weight:bold">where&lt;/span>
+...
+(&amp;lt;$) &lt;span style="color:#8b008b">::&lt;/span> a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f b &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f a
+&lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">infixl&lt;/span> &lt;span style="color:#b452cd">4&lt;/span> &amp;lt;$&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;p>
+看到这个中缀函数，想到 &lt;code class="verbatim">&amp;lt;$&amp;gt;&lt;/code> 。记得这是 Applicative 里实现的，看看。&lt;/p>
+&lt;div class="src src-haskell">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-haskell" data-lang="haskell">&lt;span style="color:#008b45">λ&lt;/span>&amp;gt; &lt;span style="color:#00688b;font-weight:bold">:&lt;/span>info &amp;lt;$&amp;gt;
+(&amp;lt;$&amp;gt;) &lt;span style="color:#8b008b">::&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Functor&lt;/span> f &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> (a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> b) &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f b
+&lt;span style="color:#228b22">-- Defined in ‘Data.Functor’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">infixl&lt;/span> &lt;span style="color:#b452cd">4&lt;/span> &amp;lt;$&amp;gt;&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;p>
+嗯，发现了一点，其实 &lt;code class="verbatim">&amp;lt;$&lt;/code> 的签名也可以写成这样的形式：&lt;/p>
+&lt;div class="src src-haskell">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-haskell" data-lang="haskell">(&amp;lt;$) &lt;span style="color:#8b008b">::&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Functor&lt;/span> f &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f b &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> f a&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;p>
+Wow，这下大家都知道了。&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div id="outline-container-headline-2" class="outline-2">
+&lt;h2 id="headline-2">
+Monad
+&lt;/h2>
+&lt;div id="outline-text-headline-2" class="outline-text-2">
+&lt;div class="src src-haskell">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-haskell" data-lang="haskell">&lt;span style="color:#8b008b;font-weight:bold">type&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> &lt;span style="color:#8b008b">::&lt;/span> (* &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> *) &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Constraint&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Applicative&lt;/span> m &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> m &lt;span style="color:#8b008b;font-weight:bold">where&lt;/span>
+(&amp;gt;&amp;gt;=) &lt;span style="color:#8b008b">::&lt;/span> m a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> (a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> m b) &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> m b
+(&amp;gt;&amp;gt;) &lt;span style="color:#8b008b">::&lt;/span> m a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> m b &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> m b
+return &lt;span style="color:#8b008b">::&lt;/span> a &lt;span style="color:#8b008b">-&amp;gt;&lt;/span> m a
+&lt;span style="color:#228b22">{-# MINIMAL (&amp;gt;&amp;gt;=) #-}&lt;/span>
+&lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> (&lt;span style="color:#00688b;font-weight:bold">Either&lt;/span> e) &lt;span style="color:#228b22">-- Defined in ‘Data.Either’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> &lt;span style="color:#00688b;font-weight:bold">[]&lt;/span> &lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Maybe&lt;/span> &lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> &lt;span style="color:#00688b;font-weight:bold">IO&lt;/span> &lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> ((&lt;span style="color:#8b008b">-&amp;gt;&lt;/span>) r) &lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> (&lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> a, &lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> b, &lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> c) &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> ((,,,) a b c)
+&lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> (&lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> a, &lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> b) &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> ((,,) a b)
+&lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">instance&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monoid&lt;/span> a &lt;span style="color:#8b008b">=&amp;gt;&lt;/span> &lt;span style="color:#00688b;font-weight:bold">Monad&lt;/span> ((,) a) &lt;span style="color:#228b22">-- Defined in ‘GHC.Base’&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+- https://ixnik.github.io/blog/posts/haskell/ - Thomas Wu 2020 ~ 2021</description></item><item><title>Emacs/Elisp Tips</title><link>https://ixnik.github.io/blog/posts/elisp-tips/</link><pubDate>Sun, 05 Sep 2021 18:34:30 +0800</pubDate><guid>https://ixnik.github.io/blog/posts/elisp-tips/</guid><description>我应该没在扯淡 https://ixnik.github.io/blog/posts/elisp-tips/ -
 &lt;div id="outline-container-headline-1" class="outline-2">
 &lt;h2 id="headline-1">
 NS-system-appearance
@@ -20,6 +81,11 @@ NS-system-appearance
 &lt;pre class="example">
 t
 &lt;/pre>
+&lt;p>
+但是，这个东西是 &lt;code class="verbatim">emacs-plus&lt;/code> 通过一个 patch 引入的，所以。&lt;/p>
+&lt;div class="src src-haskell">
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-haskell" data-lang="haskell">&lt;span style="color:#8b008b;font-weight:bold">where&lt;/span> emacs-plus &lt;span style="color:#8b008b">=&lt;/span> search &lt;span style="color:#cd5555">&amp;#34;https://github.com/&amp;#34;&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div id="outline-container-headline-2" class="outline-2">
@@ -40,13 +106,7 @@ White-space-cleanup
 &lt;code class="verbatim">M-x whi-c&lt;/code> （即 white-space-cleanup）可以处理掉文档的空白部分。&lt;/p>
 &lt;/div>
 &lt;/div>
-- https://ixnik.tk/posts/elisp-tips/ - Thomas Wu 2020 ~ 2021</description></item><item><title>Zsh</title><link>https://ixnik.tk/posts/zsh/</link><pubDate>Tue, 24 Aug 2021 18:44:41 +0800</pubDate><guid>https://ixnik.tk/posts/zsh/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/zsh/ -
-&lt;div id="outline-container-headline-1" class="outline-2">
-&lt;h2 id="headline-1">
-Intro
-&lt;/h2>
-&lt;/div>
-- https://ixnik.tk/posts/zsh/ - Thomas Wu 2020 ~ 2021</description></item><item><title>Emacs Lisp 学习笔记</title><link>https://ixnik.tk/posts/elisp/</link><pubDate>Mon, 23 Aug 2021 12:59:00 +0800</pubDate><guid>https://ixnik.tk/posts/elisp/</guid><description>我应该没在扯淡 https://ixnik.tk/posts/elisp/ -
+- https://ixnik.github.io/blog/posts/elisp-tips/ - Thomas Wu 2020 ~ 2021</description></item><item><title>Emacs Lisp 学习笔记</title><link>https://ixnik.github.io/blog/posts/elisp/</link><pubDate>Mon, 23 Aug 2021 12:59:00 +0800</pubDate><guid>https://ixnik.github.io/blog/posts/elisp/</guid><description>我应该没在扯淡 https://ixnik.github.io/blog/posts/elisp/ -
 &lt;div id="outline-container-headline-1" class="outline-2">
 &lt;h2 id="headline-1">
 Intro
@@ -88,4 +148,4 @@ Emacs 自己就带有 Elisp 文档， &lt;code class="verbatim">C-h i&lt;/code> 
 &lt;/div>
 &lt;/div>
 &lt;/div>
-- https://ixnik.tk/posts/elisp/ - Thomas Wu 2020 ~ 2021</description></item></channel></rss>
+- https://ixnik.github.io/blog/posts/elisp/ - Thomas Wu 2020 ~ 2021</description></item></channel></rss>
